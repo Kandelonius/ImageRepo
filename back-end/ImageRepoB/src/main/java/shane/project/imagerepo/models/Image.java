@@ -17,11 +17,19 @@ public class Image {
     @Column(name = "type")
     private String type;
 
-    @Lob
     @Column(name="pic")
     private byte[] pic;
 
     public Image() {
+    }
+
+    public Image(
+        String imagename,
+        String type,
+        byte[] pic) {
+        this.imagename = imagename;
+        this.type = type;
+        this.pic = pic;
     }
 
     public long getImageid() {
